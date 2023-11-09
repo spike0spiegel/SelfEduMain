@@ -2,9 +2,13 @@ import telebot
 from telebot import types
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
 
-bot = telebot.TeleBot('6941832626:AAEkDM5ZyExhqeGnt_aLGg8oj13_zK4la0g')
+bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(commands=['start'])
