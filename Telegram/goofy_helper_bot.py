@@ -14,7 +14,7 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup()
-    parkiarminda_button = types.KeyboardButton('График работы ParkiArMinda')
+    parkiarminda_button = types.KeyboardButton('График работы ParkiArMinda 1')
     markup.row(parkiarminda_button)
     bot.send_message(message.chat.id, 'Привет. Я бот-помощник.', reply_markup=markup)
     bot.register_next_step_handler(message, get_parkiarminda_data)
