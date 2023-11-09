@@ -14,14 +14,14 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup()
-    parkiarminda_button = types.KeyboardButton('График работы ParkiArMinda 1')
+    parkiarminda_button = types.KeyboardButton('График работы ParkiArMinda')
     markup.row(parkiarminda_button)
     bot.send_message(message.chat.id, 'Привет. Я бот-помощник.', reply_markup=markup)
     bot.register_next_step_handler(message, get_parkiarminda_data)
 
 @bot.message_handler(commands=['check'])
 def check(message):
-    bot.send_message(message.chat.id, 'Я включен.')
+    bot.send_message(message.chat.id, 'Я включен и работаю как надо.')
 
 
 @bot.callback_query_handler(func=lambda callback: True)
