@@ -15,7 +15,9 @@ jobs:
 
     - name: Install dependencies and deploy
       run: |
+        cd ..
         source venv/bin/activate
+        cd SelfEduMain
         git pull
         pkill -f Telegram/goofy_helper_bot.py
         python3 Telegram/goofy_helper_bot.py
