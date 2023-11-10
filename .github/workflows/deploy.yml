@@ -20,8 +20,8 @@ jobs:
     - name: Install dependencies and deploy
       run: |
         cd ~
-        cd aws-ec2-telegram-bot-helper/SelfEduMain/Telegram
+        cd aws-ec2-telegram-bot-helper/SelfEduMain
         source venv/bin/activate
         git pull
-        python3 goofy_helper_bot.py
+        python3 Telegram/goofy_helper_bot.py
 
