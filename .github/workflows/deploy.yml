@@ -15,6 +15,5 @@ jobs:
 
     - name: Deploy
       run: |
-        pkill -f Telegram/goofy_helper_bot.py
         python3 Telegram/goofy_helper_bot.py
 
