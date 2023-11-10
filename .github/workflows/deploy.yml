@@ -13,9 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Install dependencies and deploy
+    - name: Deploy
       run: |
-        git pull --no-rebase
+#       git pull origin master
         pkill -f Telegram/goofy_helper_bot.py
         python3 Telegram/goofy_helper_bot.py
 
