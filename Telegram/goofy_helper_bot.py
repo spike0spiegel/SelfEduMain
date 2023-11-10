@@ -19,6 +19,7 @@ def start(message):
     bot.send_message(message.chat.id, 'Привет. Я бот-помощник.', reply_markup=markup)
     bot.register_next_step_handler(message, get_parkiarminda_data)
 
+
 @bot.message_handler(commands=['check'])
 def check(message):
     bot.send_message(message.chat.id, 'Я включен.')

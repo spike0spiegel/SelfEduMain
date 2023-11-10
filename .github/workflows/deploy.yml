@@ -15,7 +15,7 @@ jobs:
 
     - name: Install dependencies and deploy
       run: |
-        git pull origin master
+        git pull --no-rebase
         pkill -f Telegram/goofy_helper_bot.py
         python3 Telegram/goofy_helper_bot.py
 
