@@ -1,0 +1,23 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - master  # Adjust to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies and deploy
+      run: |
+        cd ~
+        cd aws-ec2-telegram-bot-helper/SelfEduMain/Telegram
+        source venv/bin/activate
+        git pull
+        python3 goofy_helper_bot.py
+
