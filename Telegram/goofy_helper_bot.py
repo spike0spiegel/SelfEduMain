@@ -22,7 +22,7 @@ def start(message):
 
 @bot.message_handler(commands=['check'])
 def check(message):
-    bot.send_message(message.chat.id, 'Я включен и умею в CI/CD.')
+    bot.send_message(message.chat.id, 'Я включен.')
 
 
 @bot.callback_query_handler(func=lambda callback: True)
