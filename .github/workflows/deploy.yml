@@ -15,7 +15,6 @@ jobs:
 
     - name: Deploy
       run: |
-#       git pull origin master
         pkill -f Telegram/goofy_helper_bot.py
         python3 Telegram/goofy_helper_bot.py
 
